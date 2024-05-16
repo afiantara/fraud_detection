@@ -1,4 +1,4 @@
-def predict(svc,knn,dtc,rand_clf,ada,xgb,gb,sgb,cat,etc,lgbm):
+def predict(svc,knn,dtc,rand_clf,ada,xgb,gb,sgb,cat,etc,lgbm,X_train,y_train,X_test,y_test):
     from sklearn.ensemble import VotingClassifier
     from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
     classifiers = [('Support Vector Classifier', svc), ('KNN', knn),  ('Decision Tree', dtc), ('Random Forest', rand_clf),

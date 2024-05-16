@@ -238,7 +238,8 @@ def predict_and_compare_models(X_train,y_train,X_test,y_test):
     cat,cat_acc=cat_boost_classifier.predict(X_train,y_train,X_test,y_test)
     etc,etc_acc=extra_trees_classifier.predict(X_train,y_train,X_test,y_test)
     lgbm,lgbm_acc = LGBM_classifier.predict(X_train,y_train,X_test,y_test)
-    vc,vc_test_acc=vooting_classifier.predict(svc,knn,dtc,rand_clf,ada,xgb,gb,sgb,cat,etc,lgbm)
+    vc,vc_test_acc=vooting_classifier.predict(svc,knn,dtc,rand_clf,ada,xgb,gb,sgb,cat,etc,lgbm,
+    X_train,y_train,X_test,y_test)
 
     models = pd.DataFrame({
         'Model' : ['SVC', 'KNN', 'Decision Tree', 'Random Forest','Ada Boost', 'Gradient Boost', 'SGB', 'Cat Boost', 'Extra Trees', 'LGBM', 'XgBoost', 'Voting Classifier'],
